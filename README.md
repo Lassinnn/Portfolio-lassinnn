@@ -7,4 +7,4 @@ Calculator app -->  https://github.com/Lassinnn/Portfolio-2022/tree/main/Calcula
 
 Team member allocation app --> https://github.com/Lassinnn/Portfolio-2022/tree/main/allocation
 
-Energy API app -->
+Energy API app --> https://github.com/Lassinnn/Portfolio-2022/tree/main/Energy%20API%20app
