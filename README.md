@@ -1,3 +1,5 @@
 # Portfolio-2022
 Portfolio
-Hello
+Hello there!
+
+Welcome to my humble portfolio
