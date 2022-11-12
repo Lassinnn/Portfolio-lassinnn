@@ -1,0 +1,336 @@
+﻿body {
+    background: rgb(245, 245, 245);
+    color: rgb(37, 37, 37);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+#container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "header header header" "header header header" "header header header" "form output output" "form output output" "info info info" "footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+#header {
+    background: rgb(205, 223, 255);
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    padding: 30px 50px;
+    font-size: 1.3em;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: rgb(56, 56, 56);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#date {
+    display: grid;
+    place-items: center;
+    margin-bottom: 20%;
+}
+
+#formcont {
+    grid-area: form;
+    display: grid;
+    place-items: center;
+    margin-left: 10%;
+}
+
+#pvm {
+    margin-bottom: 50px;
+}
+
+#submit {
+    display: grid;
+    place-items: center;
+    margin-top: 20%;
+}
+
+#output {
+    grid-area: output;
+}
+
+.bg {
+    background: rgb(255, 255, 255);
+    padding: 30px 30px 100px 50px;
+    font-size: 1.5em;
+    margin: 40px 30px 20px 10px;
+    box-shadow: 3px 3px 10px 5px #ccc;
+    min-height: 800px;
+}
+
+.bg1 {
+    background: rgb(255, 255, 255);
+    padding: 0px 30px 20px 50px;
+    font-size: 1.1em;
+    margin: 0px 30px 30px 30px;
+    box-shadow: 3px 3px 10px 5px #ccc;
+}
+
+.result {
+    font-weight: bold;
+}
+
+#info {
+    grid-area: info;
+    display: grid;
+}
+
+#footer {
+    background: rgb(205, 223, 255);
+    grid-area: footer;
+    display: grid;
+    place-items: center;
+    padding: 25px 0px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    #container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: "header header" "form info" "form info" "form info" "output output" "output output" "output output" "output output" "footer footer" "footer footer";
+        grid-gap: 0.2rem;
+    }
+
+    #output {
+        grid-area: output;
+    }
+
+    .bg {
+        background: rgb(255, 255, 255);
+        font-size: 1.0em;
+        padding: 10px 20px;
+        margin: 0px 10px;
+        box-shadow: 3px 3px 10px 5px #ccc;
+    }
+
+    .bg1 {
+        background: rgb(255, 255, 255);
+        font-size: 0.9em;
+        padding: 10px 20px;
+        margin: 20px 10px;
+        box-shadow: 3px 3px 10px 5px #ccc;
+    }
+
+    #header {
+        background: rgb(205, 223, 255);
+        grid-area: header;
+        display: grid;
+        display: grid;
+        place-items: center;
+        font-size: 1em;
+        padding: 0px 0px;
+    }
+
+    .logo {
+        text-transform: uppercase;
+        color: rgb(56, 56, 56);
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    #date {
+        display: grid;
+        place-items: center;
+        padding-bottom: 10px;
+    }
+
+    #formcont {
+        grid-area: form;
+        display: grid;
+        place-items: center;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    #submit {
+        display: grid;
+        place-items: center;
+        padding-bottom: 40px;
+    }
+
+    #info {
+        grid-area: info;
+        display: grid;
+    }
+
+    #footer {
+        background: rgb(205, 223, 255);
+        grid-area: footer;
+        display: grid;
+        place-items: center;
+        padding: 15px 0px;
+    }
+}
+
+
+/*FORM*/
+.container {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+
+    /* Hide the browser's default checkbox */
+
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input ~ .checkmark {
+    background: rgb(205, 223, 255);
+}
+
+
+/* When the checkbox is checked, add  */
+
+.container input:checked ~ .checkmark {
+    background: rgb(255, 255, 255);
+}
+
+
+/* Create the checkmark/indicator */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 9px;
+    top: 2px;
+    width: 5px;
+    height: 15px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* datepicker */
+
+.datepicker {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 190px;
+    font-size: 20px;
+    color: rgb(114, 114, 114);
+}
+
+    .datepicker:hover {
+        cursor: pointer;
+        background: rgb(205, 223, 255);
+    }
+
+
+/* search button */
+
+.search {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background: rgb(205, 223, 255);
+    padding: 10px 10px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(37, 37, 37);
+}
+
+    .search:hover {
+        background: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+@media only screen and (max-width: 700px) {
+    /* datepicker */
+    .datepicker {
+        border: 1px solid #000000;
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 10px 10px;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        font-size: 18px;
+        color: rgb(114, 114, 114);
+    }
+
+        .datepicker:hover {
+            cursor: pointer;
+            background: rgb(205, 223, 255);
+        }
+    /* search button */
+    .search {
+        border: 1px solid #000000;
+        border-radius: 8px;
+        background: rgb(205, 223, 255);
+        padding: 10px 10px;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: rgb(37, 37, 37);
+    }
+
+        .search:hover {
+            background: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+}
