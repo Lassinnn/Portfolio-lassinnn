@@ -3,8 +3,13 @@ Hello there!
 
 Welcome to my humble portfolio
 
-Calculator app -->  https://github.com/Lassinnn/Portfolio-2022/tree/main/CalculatorReact
+Above you can find the folders of my projects.
+The calculator and team member allocation app were made by using react. 
+The energy usage api app was made with c# and ASP.NET.
+And the pig game was made by using simple procediual programming with JS.
 
-Team member allocation app --> https://github.com/Lassinnn/Portfolio-2022/tree/main/allocation
+Please check all the links and remember to email me if there is any problems.
 
-Energy API app --> https://github.com/Lassinnn/Portfolio-2022/tree/main/Energy%20API%20app
+Sincerely,
+Lassi Nurminen
+📧 Lassi.nurminen@student.lab.fi // lassi.nurminen123@gmail.com
